@@ -79,16 +79,66 @@ class Category
         return $this;
     }
 
-    
+    /**
+     * @return Collection|self[]
+     */
+    public function getSubcategories(): Collection
+    {
+        return $this->subcategories;
+    }
 
-    
+    public function addSubcategory(self $subcategory): self
+    {
+        if (!$this->subcategories->contains($subcategory)) {
+            $this->subcategories[] = $subcategory;
+            $subcategory->setParent($this);
+        }
 
-    
+        return $this;
+    }
 
-    
+    public function removeSubcategory(self $subcategory): self
+    {
+        if ($this->subcategories->contains($subcategory)) {
+            $this->subcategories->removeElement($subcategory);
+            // set the owning side to null (unless already changed)
+            if ($subcategory->getParent() === $this) {
+                $subcategory->setParent(null);
+            }
+        }
 
-    
+        return $this;
+    }
 
-    
+    /**
+     * @return Collection|Video[]
+     */
+    public function getVideos(): Collection
+    {
+        return $this->videos;
+    }
+
+    public function addVideo(Video $video): self
+    {
+        if (!$this->videos->contains($video)) {
+            $this->videos[] = $video;
+            $video->setCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVideo(Video $video): self
+    {
+        if ($this->videos->contains($video)) {
+            $this->videos->removeElement($video);
+            // set the owning side to null (unless already changed)
+            if ($video->getCategory() === $this) {
+                $video->setCategory(null);
+            }
+        }
+
+        return $this;
+    }
 }
 
