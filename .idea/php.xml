@@ -47,6 +47,24 @@
       <path value="$PROJECT_DIR$/Videos_Project/vendor/symfony/filesystem" />
       <path value="$PROJECT_DIR$/Videos_Project/vendor/symfony/error-handler" />
       <path value="$PROJECT_DIR$/Videos_Project/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/symfony/proxy-manager-bridge" />
+      <path value="$PROJECT_DIR$/Videos_Project/vendor/symfony/stopwatch" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
