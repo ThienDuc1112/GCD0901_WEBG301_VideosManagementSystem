@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <br>
+    <h1>Video title</h1>
+    <div class="Frame">
+        <iframe class="" src="https://player.vimeo.com/video/289729765" allowfullscreen></iframe>
+    </div>
+
+    <hr>
+
+    <div class="Comment">
+        <a id="video_comments"></a>
+
+        {% for i in 1..6 %}
+
+            <ul class="list-comment">
+                <li class="media">
+                    <img class="user_image" src="{{ asset('assets/img/user.jpg') }}" alt="Generic placeholder image">
+                    <div class="comment-body">
+                        <h5 class="Name-User"><b>John Doe</b> <small class="Add-comment">added a comment <small><b>3 days ago</b></small></small></h5>
+                        Good video, amazing good job
+                    </div>
+                </li>
+            </ul>
+            <hr>
+
+        {% endfor %}
+
+    </div>
+
+    <div class="submit-container">
+        <div class="Full">
+            <form method="POST" action="{{ path('video_details') }}#video_comments">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Add a comment</label>
+                    <textarea required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" class="button">Add</button>
+
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+

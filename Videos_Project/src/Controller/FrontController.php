@@ -37,6 +37,6 @@ class FrontController extends AbstractController
      */
     public function searchResults()
     {
-        return $this->render('search_results.html.twig');
+        return $this->render('front/search_results.html.twig');
     }
 }
