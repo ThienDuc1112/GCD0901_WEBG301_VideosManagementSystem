@@ -2,33 +2,125 @@
 
 {% block main %}
 
-
-    <main role="main">
-
-        <section class="jumbotron text-center">
-            <div class="container">
-
-                <h1 class="jumbotron-heading">Category - {{subcategories.currentCategoryName}}</h1>
-                <div class="btn-group">
-                    <div class="dropdown ml-2">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+    {% set sample_videos = [289729765,238902809,150870038,219727723,289879647,261379936,289029793,60594348,290253648] %}
+    <div class="video_list_container">
+        <section class="video_list_heading_content">
+                 <h1 class="video_list_heading">Category - Funny</h1>
+                <div class="video_list_heading_section">
+                    <div class="video_list_heading_section_left">
+                        <button class="video_list_button" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                             Subcategories
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <ul class="mr-5">
-                                <li><a href="{{path('video_list',{'categoryname':subcategories.mainParentName|slugify|lower, 'id':subcategories.mainParentId})}}">{{subcategories.mainParentName}}</a></li>
-                                {{subcategories.categorylist|raw}}
+                        <div class="" aria-labelledby="dropdownMenuButton">
+                            <ul class="">
+                                <li><a href="#">Funny</a></li>
+                                <ul>
+                                    <li><a href="#">Surprising</a></li>
+                                    <li><a href="#">Exciting</a></li>
+                                    <ul>
+                                        <li><a href="#">Strange</a></li>
+                                        <li><a href="#">Relaxing</a></li>
+                                    </ul>
+                                </ul>
                             </ul>
                         </div>
                     </div>
 
-                    {{ include('front/includes/_sort.html.twig') }}
+                    <div class="video_list_heading_section_right">
+                        <form action="#" method="POST">
+                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" onchange='this.form.submit();'>
+                                <option selected>Sort...</option>
+                                <option value="1">Highest rated</option>
+                                <option value="2">Title A-Z</option>
+                                <option value="3">Title Z-A</option>
+                            </select>
+                        </form>
+                    </div>
                 </div>
-            </div>
         </section>
 
-        {{ include('front/includes/_videos.html.twig', {'videos' : videos}) }}
-        {{ knp_pagination_render(videos) }}
-    </main>
+            <div class="video_list_content_section">
+                    {% for video in sample_videos %}
+                            <div class="video_list_content_item">
+
+                                    <iframe class="" src="https://player.vimeo.com/video/{{video}}" frameborder="0"
+                                            allowfullscreen></iframe>
+
+                                <div class="">
+                                    <h3>Video title</h3>
+                                    <div class="">
+                                        <div class="">
+
+                                            <i class="fa fa-thumbs-up"><small class="">(23)</small></i>&nbsp;
+                                            <i class="fa fa-thumbs-down"><small class="">(9)</small></i>
+                                            <button data-toggle="tooltip" data-placement="top" title="Click to like the video"
+                                                    type="button" class="">
+                                                <i class=""></i>
+                                            </button>
+                                            <!-- <button data-toggle="tooltip" data-placement="top" title="You like the video. Click to unlike" type="button" class="btn btn-primary btn-outline-success btn-sm mr-2">
+                                            <i class="fa fa-thumbs-up"></i>
+                                            </button> -->
+                                            <button data-toggle="tooltip" data-placement="top" title="Click to dislike the video"
+                                                    type="button" class="">
+                                                <i class=""></i>
+                                            </button>
+                                            <!-- <button data-toggle="tooltip" data-placement="top" title="You don't like the video. Click to undo" type="button" class="btn btn-primary btn-outline-danger btn-sm mr-2">
+                                            <i class="fa fa-thumbs-down"></i>
+                                            </button> -->
+                                            <a href="{{path('video_details')}}#video_comments">Comments (32)</a>
+                                        </div>
+                                        <small class="text-muted">9 mins</small>
+                                    </div>
+                                </div>
+                        </div>
+                    {% endfor %}
+
+                    <!-- no members -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <div align="center" class="embed-responsive embed-responsive-16by9">
+                                <iframe class="" src="https://player.vimeo.com/video/113716040" frameborder="0"
+                                        allowfullscreen></iframe>
+                            </div>
+                            <div class="card-body">
+                                <h3>Video title</h3>
+                                <p class="card-text text-danger">Video for <b>MEMBERS</b> only. <a href="pricing.php">Sign
+                                        up</a> for one month for free.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+
+                                        <i class="fa fa-thumbs-up mr-2"><small class="text-muted">(23)</small></i>
+                                        <i class="fa fa-thumbs-down mr-2"><small class="text-muted">(9)</small></i>
+
+                                        <a href="{{path('video_details')}}#video_comments">Comments (32)</a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+
+        <!-- pagination -->
+        <nav class="video_list_switch_section">
+            <ul class="video_list_switch_section_list">
+                <li class="video_list_li">
+                    <a class="" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="">Previous</span>
+                    </a>
+                </li>
+                <li class="video_list_li"><a class="video_list_switch_button" href="#">1</a></li>
+                <li class="video_list_li"><a class="video_list_switch_button" href="#">2</a></li>
+                <li class="video_list_li"><a class="video_list_switch_button" href="#">3</a></li>
+                <li class="video_list_li">
+                    <a class="" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 {% endblock %}

@@ -146,3 +146,37 @@ ul.footer_list_link li {
   border: 3px solid #61dafb;
   color: #61dafb;
 }
+/* VIDEOLIST */
+.video_list_container {
+  text-align: center;
+}
+.video_list_choice_option{
+
+}
+.video_list_heading{
+  font-size: 30px;
+}
+.video_list_button{
+  border: none;
+  font-size: 18px;
+  width: 10vw;
+  padding: 10px;
+}
+.video_list_heading_section{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 40%;
+  justify-items: center;
+}
+.video_list_content_section{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.video_list_switch_section_list{
+  display: flex;
+  justify-content: center;
+}
+.video_list_li{
+  list-style-type: none;
+}
