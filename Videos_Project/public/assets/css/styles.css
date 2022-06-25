@@ -10,7 +10,7 @@
   align-items: center;
   justify-items: center;
   background-color: #20232a;
-  height: 8vh;
+  height: 5vh;
 }
 .menu_search {
   width: 10vw;
@@ -25,6 +25,7 @@
 .menu_search_input {
   width: 12vw;
   height: 4.5vh;
+  padding: 6px;
 }
 .menu_search_button {
   padding: 8px;
@@ -42,9 +43,10 @@
   font-weight: 600;
   padding: 10px;
   color: #61dafb;
+  transition: 1s;
 }
 .text_option:hover {
-  background-color: cornflowerblue;
+  background-color: #61dffb;
   color: white;
 }
 .btn_log {
@@ -54,9 +56,10 @@
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
+  transition: 1s;
 }
 .btn_log:hover {
-  background-color: cornflowerblue;
+  background-color: #61dafb;
   color: white;
 }
 /* MAIN CONTENT */
@@ -111,67 +114,35 @@ ul.footer_list_link li {
   font-size: 28px;
   color: #fff;
 }
-/* PRICING */
-.pricing_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  width: 90%;
-  height: 50vh;
-  margin: 0 auto;
-  column-gap: 24px;
+/* MAIN DASHBOARD */
+.main_dashboard {
+  background-image: url(../img/wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 92vh;
 }
-.pricing_section {
-}
-ul.pricing_list {
-  margin-bottom: 20px;
-}
-.pricing_btn {
-  background-color: #61dafb;
-  color: #fff;
-  padding: 10px;
-  text-decoration: none;
-}
-.heading_title {
-  margin-top: 40px;
-  font-size: 36px;
+.main_dashboard_content {
   text-align: center;
-}
-.pricing_heading_container {
-  text-align: center;
-}
-/* LOGIN */
-
-ul.pricing_list li {
-  list-style-type: none;
-  line-height: 30px;
-}
-.form_signin {
-  margin: 0 auto;
-  display: grid;
-  row-gap: 12px;
-  width: 22vw;
-  height: 35vh;
-  position: relative;
-  top: 8rem;
-}
-.login_lable_form {
-}
-.login_btn_sign {
-  border: none;
-  font-size: 18px;
-  padding: 8px;
-  font-weight: 600;
-  background-color: #61dafb;
-  color: #fff;
-}
-.login_text_ref {
-}
-.login_form_control {
-  border: none;
-  padding: 8px;
+  position: absolute;
+  top: 36%;
+  left: 30%;
 }
 .heading_bg {
-  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.dashboard_btn {
+  padding: 15px;
+  font-size: 22px;
+  color: #fff;
+  background-color: #61dafb;
+  border: none;
+  transition: 1s;
+}
+.dashboard_btn:hover {
+  background-color: transparent;
+  cursor: pointer;
+  border: 3px solid #61dafb;
+  color: #61dafb;
 }
