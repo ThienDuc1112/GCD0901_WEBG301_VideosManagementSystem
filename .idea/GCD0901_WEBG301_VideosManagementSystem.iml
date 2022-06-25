@@ -20,6 +20,11 @@
       <excludeFolder url="file://$MODULE_DIR$/Videos_Project/vendor/symfony/doctrine-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/Videos_Project/vendor/symfony/proxy-manager-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/Videos_Project/vendor/symfony/stopwatch" />
+      <excludeFolder url="file://$MODULE_DIR$/Videos_Project/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/Videos_Project/vendor/symfony/property-info" />
+      <excludeFolder url="file://$MODULE_DIR$/Videos_Project/vendor/symfony/polyfill-intl-icu" />
+      <excludeFolder url="file://$MODULE_DIR$/Videos_Project/vendor/symfony/property-access" />
+      <excludeFolder url="file://$MODULE_DIR$/Videos_Project/vendor/symfony/form" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -155,12 +155,19 @@ ul.footer_list_link li {
 }
 .video_list_heading{
   font-size: 30px;
+  color: #fff;
+  padding: 30px 0;
 }
 .video_list_button{
   border: none;
   font-size: 18px;
   width: 10vw;
   padding: 10px;
+  margin-bottom: 16px;
+  transition: 1s;
+}
+.video_list_button:hover{
+  background-color: #61dffb;
 }
 .video_list_heading_section{
   margin: 0 auto;
@@ -172,6 +179,7 @@ ul.footer_list_link li {
 .video_list_content_section{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 10vh;
 }
 .video_list_switch_section_list{
   display: flex;
@@ -179,4 +187,11 @@ ul.footer_list_link li {
 }
 .video_list_li{
   list-style-type: none;
+}
+.video_list_heading_content{
+  background-color: #2e333d;
+}
+.video_list_option_list{
+  padding: 10px;
+  font-size: 18px;
 }
