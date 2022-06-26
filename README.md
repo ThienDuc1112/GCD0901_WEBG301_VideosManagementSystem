@@ -1,4 +1,4 @@
-
+# Steps to create "Video Sharing Service" project in Symfony 
 ## 1. Initialize the project by, using the command:
 ```
 composer create-project symfony/skeleton my-project
