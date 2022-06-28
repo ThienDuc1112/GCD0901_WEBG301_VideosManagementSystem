@@ -1,29 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block customstylesheets %}
-    <link rel="stylesheet" href="{{asset('assets/css/login.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
 {% endblock %}
 {% block menu %}{% endblock %}
 {% block main %}
-    {% if error %}
-        <div class="">
-            {{ error.messageKey|trans(error.messageData, 'security') }}
-        </div>
-    {% endif %}
-    <form method="POST" action="{{path('login')}}" class="form-signin">
-        <h1 class="">Please sign in</h1>
-        <label for="inputEmail" class="">Email address</label>
-        <input type="email" name="_email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="">Password</label>
-        <input type="password" name="_password" id="inputPassword" class="" placeholder="Password" required>
+    <form method="POST" action="#" class="login_section">
+        <h1 class="heading_bg">Please sign in</h1>
+        <label for="inputEmail" class="login_label">Email address</label>
+        <input type="email" id="inputEmail" class="login_input" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="login_label">Password</label>
+        <input type="password" id="inputPassword" class="login_input" placeholder="Password" required>
         <div class="checkbox mb-3">
             <label>
-                <input type="checkbox" name="_remember_me"> Remember me
+                <input type="checkbox" value="remember-me"> Remember me
             </label>
         </div>
-        <button class="" type="submit">Sign in</button>
-        <p class="">&copy; 2017-2018 <a href="{{path('main_page')}}">main page</a></p>
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+        <button class="login_btn" type="submit">Sign in</button>
     </form>
 {% endblock %}
 {% block footer_links %}{% endblock %}
